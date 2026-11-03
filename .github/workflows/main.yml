@@ -39,7 +39,7 @@ jobs:
         run: npm run build
 
       - name: Create Android platform
-        run: npx cap add android
+        run: npx cap add android || echo "android already exists"
 
       - name: Synchronize Capacitor
         run: npx cap sync android
